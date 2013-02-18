@@ -80,12 +80,13 @@ body {
   opacity:0.8;
   filter:alpha(opacity=80);
   font-size: 14px;
+  padding: 3px;
   text-align: left;
 }
 
 .share {
   position: absolute;
-  top: 91%;
+  top: 90%;
   right: 0;
   border: 1px solid #444;
   height: 12px;
@@ -94,9 +95,14 @@ body {
   border-radius: 3px;
   width: 26px;
   text-align: center;
-  padding: 2px 4px 0px 4px;
+  padding: 0px 4px 0px 4px;
   color: #444;
   cursor:pointer
+}
+
+.share:hover {
+  background: #444;
+  color: #fff;
 }
 
 .halfbtn {
@@ -107,7 +113,7 @@ body {
   position: relative;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  cursor:pointer
+  cursor:pointer;
 }
 
 #shflbtn {
@@ -117,8 +123,12 @@ body {
   font-weight: bold;
 }
 
+#fltrbtn:hover {
+  background: #f0f0f0;
+}
+
 #fltrbtn {
-  border: 1px solid #444;
+  border: 1px solid #aaa;
 }
 
 .filtergrid {
@@ -126,14 +136,20 @@ body {
   height: 14%; 
   display: inline-block;
   position: relative;
-  background-color: #ccc;
+  background-color: #ddd;
   -moz-border-radius: 4px;
   border-radius: 4px;
   cursor:pointer
 }
 
+.filtergrid:hover:not(.off) {
+  background-color: #faf0c0;
+}
+
 .off {
-  background-color: white;
+  background-color: #fab800;
+  border: 2px solid #eaa800;
+  box-sizing: border-box;
 }
 
 .fullbtn {
@@ -175,19 +191,21 @@ body {
 /*Share Pop-Up*/
 
 .third {
-  height: 60%;
+  background-color: rgba(0,0,0,0.5);
+  height: 100%;
   z-index: 50; /*CHANGE THIS LATER*/
   display: none;
   position: absolute;
-  top: 20%;
   left: 0px;
   bottom: 0px;
   right: 0px;
-  background-color: white;
-      }
+}
 
 .slim {
-  width: 35%;
+  width: 50%;
+  height: 60%;
+  position: relative;
+  top: 20%;
 }
 
 .inslim {
